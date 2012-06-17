@@ -10,6 +10,8 @@ Open terminal, type:
 
 Visit: http://127.0.0.1:8000/
 
+ctrl-c to quit.
+
 To build:
 
 Copy content from index_development.html to index.html.

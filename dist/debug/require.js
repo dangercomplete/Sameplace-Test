@@ -2040,7 +2040,6 @@ var requirejs, require, define;
 define('main',["jquery"], function($) {
   var jQuery = $;
   $(document).ready(function(){
-    alert("ready");
   });
 });
 requirejs.config({

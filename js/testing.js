@@ -6,8 +6,10 @@ define(["jquery", "utilities", "bootstrap_modal"], function($) {
           r = /([^&=]+)=?([^&]*)/g,
           d = function(s) { return decodeURIComponent(s.replace(a, ' ')); },
           q = window.location.search.substring(1);
-      while (e = r.exec(q)) {
+      e = r.exec(q);
+      while (e) {
         url_params[d(e[1])] = d(e[2]);
+        e = r.exec(q);
       }
   })();
   var test_hash_code = function(i) {
@@ -59,7 +61,7 @@ define(["jquery", "utilities", "bootstrap_modal"], function($) {
     var image = new Image(1,1);
     image.src = 'http://www.googleadservices.com/pagead/conversion/' + google_conversion_id + '/?random=' + randomNum + 'label=' + google_conversion_label + '&guid=ON&script=0';
     }, 250);
-  }
+  };
   $(document).ready(function() {
     track("Visited Page");
     $(document).on("change", "select", function(e){

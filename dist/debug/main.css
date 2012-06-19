@@ -7411,6 +7411,8 @@ img {
 .subhead {
   text-align: center;
   font-size: 22px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-bottom: 20px;
 }
 .brand a {
   color: #ffffff;

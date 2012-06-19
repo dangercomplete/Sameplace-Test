@@ -50,10 +50,7 @@ module.exports = function(grunt) {
       // Root application module
       name: "config",
       // Do not wrap everything in an IIFE
-      wrap: false,
-      paths: {
-          jquery: "empty:"
-      }
+      wrap: false
     },
   });
   grunt.registerTask("default", "clean lint requirejs concat less");

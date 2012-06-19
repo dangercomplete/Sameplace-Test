@@ -6,7 +6,7 @@ requirejs.config({
     bootstrap_modal: "../bootstrap/js/bootstrap-modal"
   },
   shim: {
-  	utilities: [],
-  	bootstrap_modal: ["jquery"]
+    utilities: [],
+    bootstrap_modal: ["jquery"]
   }
 });

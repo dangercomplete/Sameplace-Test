@@ -44,7 +44,7 @@
   <div class="container">
     <div class="row">
       <div class="span12">
-        <img src="img/app.png" />
+        <img src="img/app.png?a=1234" />
         <h1>Be there when business happens.</h1>
         <p class="subhead">Sameplace™ simplifies team reporting and streamlines business operations. Give sales professionals the information they need on the devices they use.</p>
         <h1><a href="#" id="try">Try Sameplace™</a></h1>
@@ -52,9 +52,9 @@
     </div>
     <div class="row">
       <div class="span4">
-        <h2>Share sales information instantly.</h2>
-        <p>Set appointments, and check into customer locations with GPS enabled smartphones. Update the status of your accounts with realtime information.</p>
-        <img src="img/other.jpg" />
+        <h2>Share sales information instantly</h2>
+        <p>Set appointments and check into customer locations with GPS enabled smartphones. Update the status of your accounts in real time.</p>
+        <img src="img/android.png" />
         <h2>Easy start-up</h2>
         <ul>
           <li>Built in integration to Salesforce.com - leverage and extend your current CRM investment.</li>
@@ -64,9 +64,9 @@
         </ul>
       </div>
       <div class="span4">
-        <h2>Connect with tools you use.</h2>
-        <p>Sameplace™ is seamlessly integrated with leading CRM software from Salesforce.com. Easily access and update all of your business information. </p>
-        <img src="img/ipad_iphone.png" />
+        <h2>Connect to tools you aready use</h2>
+        <p>Sameplace™ is seamlessly integrated with leading CRM software from Salesforce.com. Easily access and update all of your business information.</p>
+        <img src="img/salesforce_ipad.png" />
         <h2>A competitive edge</h2>
         <ul>
           <li>Keep track of your activity in real time with appointment tracking, scheduling, and GPS - GEO enabled check in's. </li>
@@ -78,9 +78,9 @@
         </ul>
       </div>
       <div class="span4">
-        <h2>Business Intelligence.</h2>
-        <p>Quickly access unified key profile information for your customers from over 100 social networks like Facebook and Twitter.  Approach new oportuniies with more information, close more deals, and  service your customers better.</p>
-        <img src="img/ipad_iphone.png" />
+        <h2>Learn about your customers</h2>
+        <p>Access customer profile information from social networks like LinkedIn, Facebook, and Twitter.</p>
+        <img src="img/white_iphone.png" />
         <h2>A competitive edge</h2>
         <ul>
           <li>Keep track of your activity in real time with appointment tracking, scheduling, and GPS - GEO enabled check in's. </li>
@@ -94,7 +94,50 @@
       </div>
     </div>
   </div>
-
+  <div class="modal hide" id="modal_form">
+    <div class="modal-body">
+      <h2 id="thanks" style="display:none;">Thanks, we'll be in touch!</h2>
+      <form id="inviteform" class="form-horizontal" action="#" method="post">
+        <legend>Enter your contact information below. A customer support agent will help you get the best deal.</legend>
+        <fieldset>
+          <div class="control-group">
+            <label class="control-label" for="name">Name</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="name" name="cm-name" placeholder="First Last">
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="control-group">
+            <label class="control-label" for="email">Email</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="email" name="cm-ydhikj-ydhikj" placeholder="example@example.com">
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="control-group">
+            <label class="control-label" for="phone">Phone Number</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="phone" name="cm-f-oyuju" placeholder="555-555-5555">
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="control-group">
+            <label class="control-label" for="Preferred Contact Method">Preferred Contact Method:</label>
+            <div class="controls">
+              <input type="radio" name="cm-fo-ojke" id="cm211681" value="211681" /> Phone<br />
+              <input type="radio" name="cm-fo-ojke" id="cm211682" value="211682" /> Email
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn btn-primary" id="inviteform_submit">Go!</a>
+    </div>
+  </div>
 	<!-- End the content here. -->
 </body>
 </html>

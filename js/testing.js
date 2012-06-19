@@ -25,7 +25,9 @@ define(["jquery", "utilities", "bootstrap_modal"], function($) {
   };
   var track = function(msg) {
     log("Track: “" + msg + "”");
-    mixpanel.track(msg);
+    setTimeout(function(){
+      mixpanel.track(msg);
+    }, 250);
     _gaq.push(['_trackEvent', 'Page', msg]);
   };
   var register_once = function(properties) {
@@ -44,22 +46,20 @@ define(["jquery", "utilities", "bootstrap_modal"], function($) {
       _gaq.push(['_setCustomVar', 1, 'Page', key, properties[key]]);
     }
   };
-  //var google_adwords_conversion_click_action_button = function() {
-  //  setTimeout(function(){
-  //  google_conversion_id = 991240381;
-  //  google_conversion_language = "en";
-  //  google_conversion_format = "3";
-  //  google_conversion_color = "ffffff";
-  //  google_conversion_label = "q0WaCPuPlgQQvcHU2AM";
-  //  google_conversion_value = 0;
-  //  var randomNum = new Date().getMilliseconds();
-  //  $.getScript("http://www.googleadservices.com/pagead/conversion.js");
-  //  var image = new Image(1,1);
-  //  image.src = 'http://www.googleadservices.com/pagead/conversion/' + google_conversion_id + '/?random=' + randomNum + 'label=' + google_conversion_label + '&guid=ON&script=0';
-  //  }, 250);
-  //}
-
-
+  var google_adwords_conversion_click_action_button = function() {
+    setTimeout(function(){
+    google_conversion_id = 1000684591;
+    google_conversion_language = "en";
+    google_conversion_format = "3";
+    google_conversion_color = "ffffff";
+    google_conversion_label = "oS2GCJGjpwMQr_iU3QM";
+    google_conversion_value = 0;
+    var randomNum = new Date().getMilliseconds();
+    $.getScript("http://www.googleadservices.com/pagead/conversion.js");
+    var image = new Image(1,1);
+    image.src = 'http://www.googleadservices.com/pagead/conversion/' + google_conversion_id + '/?random=' + randomNum + 'label=' + google_conversion_label + '&guid=ON&script=0';
+    }, 250);
+  }
   $(document).ready(function() {
     track("Visited Page");
     $(document).on("change", "select", function(e){
@@ -75,7 +75,7 @@ define(["jquery", "utilities", "bootstrap_modal"], function($) {
         "Left Via": "Action: " + $(this).val()
       });
       track("Click Action Button");
-      //google_adwords_conversion_click_action_button();
+      google_adwords_conversion_click_action_button();
       e.preventDefault();
       $('#modal_form').modal({});
     });

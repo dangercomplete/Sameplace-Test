@@ -15,8 +15,9 @@
   <link rel="stylesheet" href="dist/release/main.css" />
 </head>
 <body>
+
   <!-- Start the content here. -->
-<div class="navbar navbar-fixed-top">
+  <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
         <a class="brand" href="#">
@@ -24,8 +25,7 @@
           sameplace
         </a>
         <ul class="nav pull-right">
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
+          <li><a href="#">Login</a></li>
         </ul>
       </div>
     </div>
@@ -35,8 +35,8 @@
       <div class="span12">
         <img src="img/app.png?a=1234" />
         <h1>Be there when business happens.</h1>
-        <p class="subhead">Sameplace™ simplifies team reporting and streamlines business operations. Give sales professionals the information they need on the devices they use.</p>
-        <h1><a href="#" id="try">Try Sameplace™</a></h1>
+        <p class="subhead">Sameplace simplifies team reporting and streamlines business operations. Give sales professionals the information they need on the devices they use.</p>
+        <h1><a href="#" id="try">Try Sameplace</a></h1>
       </div>
     </div>
     <div class="row">
@@ -51,12 +51,12 @@
           <li>Simple menus, and common functionality requre no training.</li>
           <li>Connect with sales teams and update accounts instantly.</li>
           <li>Apps are availible in the app store today.</li>
-          <li>Sameplace™ is web and mobile, there's no software to install, or manually update.</li>
+          <li>Sameplace is web and mobile, there's no software to install, or manually update.</li>
         </ul>
       </div>
       <div class="span4">
         <h2>Connect to tools you aready use</h2>
-        <p>Sameplace™ is seamlessly integrated with leading CRM software from Salesforce.com. Easily access and update all of your business information.</p>
+        <p>Sameplace is seamlessly integrated with leading CRM software from Salesforce.com. Easily access and update all of your business information.</p>
         <img src="img/salesforce_ipad.png" />
         <h2>Access information you need</h2>
         <ul>
@@ -77,7 +77,7 @@
           <li>Quickly see key information for each of your leads and contacts. </li>
           <li>Personalize your sales and support interactions.</li>
           <li>Develop stronger relationships with customers.</li>
-          <li>Sameplace™ delivers a unified view of your contacts on your mobile device.</li>
+          <li>Sameplace delivers a unified view of your contacts on your mobile device.</li>
           <li>Lead meetings with a more accurate information.</li>
         </ul>
       </div>
@@ -87,8 +87,8 @@
   <div class="modal hide" id="modal_form">
     <div class="modal-body">
       <h2 id="thanks" style="display:none;">Thanks, we'll be in touch!</h2>
-      <form id="inviteform" class="form-horizontal" action="#" method="post">
-        <legend>Enter your contact information below. A customer support agent will help you get the best deal.</legend>
+      <form id="inviteform" class="form-horizontal" action="http://sameplace.createsend.com/t/j/s/yhhis/" method="post">
+        <legend>Enter your contact information to get started.</legend>
         <fieldset>
           <div class="control-group">
             <label class="control-label" for="name">Name</label>
@@ -101,7 +101,7 @@
           <div class="control-group">
             <label class="control-label" for="email">Email</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="email" name="cm-ydhikj-ydhikj" placeholder="example@example.com">
+              <input type="text" class="input-xlarge" id="email" name="cm-yhhis-yhhis" placeholder="example@example.com">
             </div>
           </div>
         </fieldset>
@@ -109,16 +109,7 @@
           <div class="control-group">
             <label class="control-label" for="phone">Phone Number</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="phone" name="cm-f-oyuju" placeholder="555-555-5555">
-            </div>
-          </div>
-        </fieldset>
-        <fieldset>
-          <div class="control-group">
-            <label class="control-label" for="Preferred Contact Method">Preferred Contact Method:</label>
-            <div class="controls">
-              <input type="radio" name="cm-fo-ojke" id="cm211681" value="211681" /> Phone<br />
-              <input type="radio" name="cm-fo-ojke" id="cm211682" value="211682" /> Email
+              <input type="text" class="input-xlarge" id="phone" name="cm-f-ohdid" placeholder="555-555-5555">
             </div>
           </div>
         </fieldset>
@@ -129,6 +120,20 @@
     </div>
   </div>
   <!-- End the content here. -->
+
+  <script>
+    var _errs = [];
+    window.onerror = function(){
+      _errs.push(arguments);
+    }
+    setInterval(function(){
+      while(_errs.length > 0 && typeof mixpanel != "undefined") {
+        var error = _errs.pop();
+        mixpanel.register({"Error": "Message: " + error[0] + " URL: " + error[1] + " Line number: " + error[2]});
+        mixpanel.track("Error");
+      }
+    }, 250);
+  </script>
   <script src="dist/release/require.js"></script>
   <script>
       var _gaq=[['_setAccount','UA-32699895-1'],['_trackPageview']];

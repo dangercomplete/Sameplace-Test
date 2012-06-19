@@ -1,7 +1,5 @@
 @sansFontFamily: 'Oxygen', sans-serif;
 @navbarLinkColor: #ffffff;
-@baseFontSize:16px;
-@baseLineHeight:22px;
 
 body {
 	padding-top:60px;
@@ -26,11 +24,30 @@ img {
   display:block;
 }
 
-.subhead {
-  text-align:center;
-  font-size:22px;
+h1 {
+  font-size:48px
+}
+
+.row p.subhead {
+  text-align:center; 
   font-family: 'PT Sans Narrow', sans-serif;
   margin-bottom:20px;
+  text-align:center;
+  font-size:22px;
+  line-height:26px;
+}
+
+.row {
+  p, li {
+    font-size:16px;
+    line-height:22px;
+  }
+  p { 
+    margin-bottom:20px
+  }
+  li {
+    margin-bottom:10px
+  }
 }
 
 .brand a {
@@ -85,3 +102,10 @@ img {
   background-color:#79bbff;
 }
 
+#inviteform legend {
+  text-align:center;
+}
+
+.span4 img {
+  margin-bottom:20px;
+}

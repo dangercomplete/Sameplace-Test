@@ -9702,19 +9702,14 @@ define('testing',["jquery", "utilities", "bootstrap_modal"], function($) {
   };
   $(document).ready(function() {
     track("Visited Page");
-    $(document).on("change", "select", function(e){
-      var properties = {};
-      properties[this.name] = $(this).find("option[value='" + $(this).val() + "']").text();  
-      register(properties);
-      track("Changed " + this.name);
-    });
     $(document).on("click", "#try", function(e){
       register({
-        "Action Button": $(this).val(),
+        "Action Button": $(this).text(),
         "Clicked Action Button": true,
-        "Left Via": "Action: " + $(this).val()
+        "Left Via": "Action: " + $(this).text()
       });
       track("Click Action Button");
+      track("Leave Page Via Click");
       google_adwords_conversion_click_action_button();
       e.preventDefault();
       $('#modal_form').modal({});

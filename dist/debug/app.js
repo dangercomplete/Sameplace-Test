@@ -9680,17 +9680,11 @@ define('testing',["jquery", "utilities", "bootstrap_modal"], function($) {
     log("Register (Once):");
     log(properties);
     mixpanel.register_once(properties);
-    for(var key in properties) {
-      _gaq.push(['_setCustomVar', 1, 'Page', key, properties[key]]);
-    }
   };
   var register = function(properties) {
     log("Register:");
     log(properties);
     mixpanel.register(properties);
-    for(var key in properties) {
-      _gaq.push(['_setCustomVar', 1, 'Page', key, properties[key]]);
-    }
   };
   var google_adwords_conversion_click_action_button = function() {
     setTimeout(function(){
@@ -9714,7 +9708,7 @@ define('testing',["jquery", "utilities", "bootstrap_modal"], function($) {
       register(properties);
       track("Changed " + this.name);
     });
-    $(document).on("click", "input[type=button]", function(e){
+    $(document).on("click", "#try", function(e){
       register({
         "Action Button": $(this).val(),
         "Clicked Action Button": true,
@@ -9725,7 +9719,7 @@ define('testing',["jquery", "utilities", "bootstrap_modal"], function($) {
       e.preventDefault();
       $('#modal_form').modal({});
     });
-    $(document).on("click", "a:not(.select2-container a, .modal a)", function(e){
+    $(document).on("click", "a:not(.select2-container a, .modal a, #try)", function(e){
       var name = $(this).text();
       e.preventDefault();
       register({

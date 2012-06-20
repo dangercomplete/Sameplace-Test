@@ -64,7 +64,7 @@ define(["jquery", "utilities", "bootstrap_modal"], function($) {
       register(properties);
       track("Changed " + this.name);
     });
-    $(document).on("click", "input[type=button]", function(e){
+    $(document).on("click", "#try", function(e){
       register({
         "Action Button": $(this).val(),
         "Clicked Action Button": true,
@@ -75,7 +75,7 @@ define(["jquery", "utilities", "bootstrap_modal"], function($) {
       e.preventDefault();
       $('#modal_form').modal({});
     });
-    $(document).on("click", "a:not(.select2-container a, .modal a)", function(e){
+    $(document).on("click", "a:not(.select2-container a, .modal a, #try)", function(e){
       var name = $(this).text();
       e.preventDefault();
       register({

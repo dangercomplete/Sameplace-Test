@@ -36,17 +36,11 @@ define(["jquery", "utilities", "bootstrap_modal"], function($) {
     log("Register (Once):");
     log(properties);
     mixpanel.register_once(properties);
-    for(var key in properties) {
-      _gaq.push(['_setCustomVar', 1, 'Page', key, properties[key]]);
-    }
   };
   var register = function(properties) {
     log("Register:");
     log(properties);
     mixpanel.register(properties);
-    for(var key in properties) {
-      _gaq.push(['_setCustomVar', 1, 'Page', key, properties[key]]);
-    }
   };
   var google_adwords_conversion_click_action_button = function() {
     setTimeout(function(){
